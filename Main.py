@@ -1,5 +1,5 @@
 from WindGuru import WindGuru
-# import firebase as fb
+import firebase as fb
 from FirebaseDetails import FirebaseDetails
 from datetime import datetime
 
@@ -7,9 +7,8 @@ class Main:
 
 	def __init__(self):
 		print "Executing ..."
-		# firebaseDetails = FirebaseDetails()
-		# self.firebase = fb.FirebaseApplication(firebaseDetails.getURL(), firebaseDetails.getAuth())
-		self.firebase = FirebaseDetails().getApplication()
+		firebaseDetails = FirebaseDetails()
+		self.firebase = fb.FirebaseApplication(firebaseDetails.getURL(), firebaseDetails.getAuth())
 		self.URL = "http://www.weatherlink.com/user/constantwind/"
 		# self.test()
 		self.startLoop()
